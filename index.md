@@ -1,4 +1,4 @@
-![](https://github.com/mnakagawa14/digits/blob/e2c70cbdd4f2e202170c9e4fe2584cb50c452b5c/doc/landing-page.png)
+![](https://github.com/mnakagawa14/digits/blob/doc/landing-page.png)
 
 Digits is an application that allows users to:
 
