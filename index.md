@@ -1,35 +1,18 @@
 ![](https://github.com/mnakagawa14/digits/blob/e2c70cbdd4f2e202170c9e4fe2584cb50c452b5c/doc/landing-page.png)
 
-meteor-application-template-react is a sample Meteor 2.9 application that illustrates: 
+Digits is an application that allows users to:
 
-  * A standard directory layout using 'imports/' as recommended in the [Meteor Guide](https://guide.meteor.com/structure.html)
-  * [Bootstrap 5 React](https://react-bootstrap.github.io/) for user interface.
-  * [Uniforms](https://uniforms.tools/) for form development.
-  * [alanning:roles](https://github.com/alanning/meteor-roles) to implement a special "Admin" user.
-  * Authorization, authentication, and registration using built-in Meteor packages.
-  * Initialization of users and data from a settings file.
-  * Alerts regarding success or failure of DB updates using [Sweet Alert](https://sweetalert.js.org/).
-  * Quality assurance using [ESLint](http://eslint.org) with packages to partially enforce the [Meteor Coding Standards](https://guide.meteor.com/code-style.html) and the [AirBnB Javascript Style Guide](https://github.com/airbnb/javascript).
-
-The goal of this template is to help you get quickly started doing Meteor development by providing a reasonable directory structure for development and deployment, a set of common extensions to the core framework, and boilerplate code to implement basic page display, navigation, forms, roles, and collection manipulation.
-
-To keep this codebase simple and small, some important capabilities are intentionally excluded from this template:
-
-  * Unit Testing.
-  * Security (meteor-application-template-react enables the insecure packages)
-  * Deployment
-
-Examples of the these capabilities will be provided elsewhere.
+  * Register an account
+  * Create and manage a set of contacts
+  * Add a set of timestamped notes to each contact
 
 ## Installation
 
 First, [install Meteor](https://www.meteor.com/install).
 
-Second, go to [https://github.com/ics-software-engineering/meteor-application-template-react](https://github.com/ics-software-engineering/meteor-application-template-react), and click the "Use this template" button. Complete the dialog box to create a new repository that you own that is initialized with this template's files.
+Second, [download a copy of Digits]([https://github.com/ics-software-engineering/meteor-application-template-react](https://github.com/mnakagawa14/digits). Note that Digits is a private repo and so you will need to request permission from the author to gain access to the repo.
 
-Third, go to your newly created repository, and click the "Clone or download" button to download your new GitHub repo to your local file system.  Using [GitHub Desktop](https://desktop.github.com/) is a great choice if you use MacOS or Windows.
-
-Fourth, cd into the app/ directory of your local copy of the repo, and install third party libraries with:
+Third, cd into the app/ directory of your local copy of the repo, and install third party libraries with:
 
 ```
 $ meteor npm install
@@ -37,7 +20,7 @@ $ meteor npm install
 
 ## Running the system
 
-Once the libraries are installed, you can run the application by invoking the "start" script in the [package.json file](https://github.com/ics-software-engineering/meteor-application-template-react/blob/master/app/package.json):
+Once the libraries are installed, you can run the application by invoking the "start" script
 
 ```
 $ meteor npm run start
@@ -46,31 +29,27 @@ $ meteor npm run start
 The first time you run the app, it will create some default users and data. Here is the output:
 
 ```
- meteor npm run start 
+ meteor npm run start
 
-> meteor-application-template-react@ start /Users/carletonmoore/GitHub/ICS314/meteor-application-template-react/app
+> meteor-application-template-react@ start C:\Users\micha\Documents\GitHub\digits\app
 > meteor --no-release-check --exclude-archs web.browser.legacy,web.cordova --settings ../config/settings.development.json
 
-[[[[[ ~/GitHub/ICS314/meteor-application-template-react/app ]]]]]
+[[[[[ C:\Users\micha\Documents\GitHub\digits\app ]]]]]
 
-=> Started proxy.                             
-=> Started HMR server.                        
+=> Started proxy.
+=> Started HMR server.
 => Started MongoDB.                           
-I20220529-12:09:18.384(-10)? Creating the default user(s)
-I20220529-12:09:18.389(-10)?   Creating user admin@foo.com.
-I20220529-12:09:18.453(-10)?   Creating user john@foo.com.
-I20220529-12:09:18.515(-10)? Creating default data.
-I20220529-12:09:18.515(-10)?   Adding: Basket (john@foo.com)
-I20220529-12:09:18.599(-10)?   Adding: Bicycle (john@foo.com)
-I20220529-12:09:18.600(-10)?   Adding: Banana (admin@foo.com)
-I20220529-12:09:18.601(-10)?   Adding: Boogie Board (admin@foo.com)
-I20220529-12:09:18.773(-10)? Monti APM: completed instrumenting the app
+I20231106-22:47:49.395(-10)? Creating the default user(s)
+I20231106-22:47:49.410(-10)?   Creating user admin@foo.com.
+I20231106-22:47:50.191(-10)?   Creating user john@foo.com.
+I20231106-22:47:50.408(-10)? Creating default contacts.
+I20231106-22:47:50.409(-10)?   Adding: Johnson (john@foo.com)
+I20231106-22:47:50.449(-10)?   Adding: Casanova (john@foo.com)
+I20231106-22:47:50.452(-10)?   Adding: Binsted (admin@foo.com)
 => Started your app.
 
 => App running at: http://localhost:3000/
 ```
-
-Periodically, you might see `Error starting Mongo (2 tries left): Cannot run replSetReconfig because the node is currently updating its configuration` after the `=> Started HMR server.`. It doesn't seem to be a problem since the MongoDB does start.
 
 ### Viewing the running app
 
